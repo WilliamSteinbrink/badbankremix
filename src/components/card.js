@@ -1,6 +1,5 @@
 import React from 'react';
-// import { UserContext } from '../context';
-import { Card } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 
 function CardComp(props) {
   function background() {

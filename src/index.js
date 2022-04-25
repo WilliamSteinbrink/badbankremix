@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import { UserContext } from './context';
 import NavBar from './components/navbar';
 import Home from './components/home';
 import CreateAccount from './components/createaccount';
@@ -17,7 +16,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <NavBar />
-    <UserContext.Provider>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="createaccount" element={<CreateAccount />} />
@@ -27,7 +25,6 @@ root.render(
       <Route path="/balance" element={<Balance />} />
       <Route path="/alldata" element={<AllData />} />
     </Routes>
-    </UserContext.Provider>
   </BrowserRouter>
 );
 
